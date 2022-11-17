@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
@@ -74,7 +75,46 @@ public class Main {
             return 1;
     }
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.print("Enter a number: ");
+        double number1 = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.print("Enter a number: ");
+        double number2 = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.print("What operations do you want to perform?: ");
+        String operation = scanner.nextLine();
+
+        switch (operation){
+            case "sum":
+                System.out.printf("%f + %f = %f", number1, number2, number1 + number2);
+                break;
+            case "sub":
+                System.out.printf("%f - %f = %f", number1, number2, number1 - number2);
+                break;
+            case "div":
+                if(number2 == 0){
+                    System.out.printf("Can not divide number by zero!");
+                }else{
+                    System.out.printf("%f / %f = %f", number1, number2, number1 / number2);
+                }
+                break;
+            case "mul":
+                 System.out.printf("%f * %f = %f", number1, number2, number1 * number2);
+                break;
+            default:
+                System.out.printf("%s operation is not supported! ", operation);
+        }
+
+
+//
+//
+//
+//
+//
 //        System.out.println(largestPrimeFactor(10));
 //        System.out.println(largestPrimeFactor(6936));
 //        System.out.println(largestPrimeFactor(1));
