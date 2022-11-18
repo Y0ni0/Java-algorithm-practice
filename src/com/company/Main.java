@@ -34,6 +34,16 @@ public class Main {
         }
         return max;
     }
+    //largest adjacent sum 2
+    public static int largestAdjacentSum2(int [] a){
+        int largestSum = Integer.MIN_VALUE;
+        for(int i=0; i<a.length-1; i++){
+            if(a[i] + a[i+1]> largestSum){
+                largestSum = a[i] + a[i+1];
+            }
+        }
+        return largestSum;
+    }
     //largest prime factor
     public static int largestPrimeFactor(int num){
         if(num <= 1) return 0;
@@ -74,6 +84,40 @@ public class Main {
 
             return 1;
     }
+    //Check Concatenated sum
+    public static int checkConcatenatedSum(int n, int catLen){
+        int originalNum = n;
+        int totalSum = 0;
+        while(n!=0){
+            int digit = n%10;
+            int concatNum = 0;
+            for (int i=0; i<catLen; i++){
+                concatNum = (concatNum*10) + digit;
+            }
+            totalSum += concatNum;
+            n= n/10;
+        }
+        return originalNum == totalSum ? 1 : 0;
+    }
+        public static int decodeArray(int [] a){
+            int encodedNum = 0;
+            for(int i=0; i<a.length-1; i++){
+                int digit = Math.abs(a[i] - a[i+1]);
+                encodedNum = encodedNum*10 + digit;
+            }
+            if (a[0]<0) return encodedNum * -1;
+            return encodedNum;
+        }
+    //is m-n sequenced array
+    public static int isSequencedArray2(int[] a, int m, int n){
+       if(a[0]!=m || a[a.length-1]!=n) return 0;
+
+       for(int i=0; i<a.length-1; i++){
+           if(a[i+1] - a[i]!=0 && a[i+1] - a[i]!= 1) return 0;
+       }
+        return 1;
+    }
+
     public static void main(String[] args) {
 //        Scanner scanner = new Scanner(System.in);
 //
@@ -110,12 +154,7 @@ public class Main {
 //        }
 
            // Basics.Basic();
-        Loops.Loops();
-//
-//
-//
-//
-//
+
 //        System.out.println(largestPrimeFactor(10));
 //        System.out.println(largestPrimeFactor(6936));
 //        System.out.println(largestPrimeFactor(1));
@@ -134,5 +173,24 @@ public class Main {
             System.out.println("Example 5: " + example5);
             System.out.println("Example 6: " + example6);
      */
+        //Test cases
+        int example1 = isSequencedArray2(new int[] {1,2,3,4,5},1,5);
+        int example2 = isSequencedArray2(new int[] {1,3,4,2,5},1 ,5);
+        int example3 = isSequencedArray2(new int[] {-5,-5,-4,-4,-3,-3,-2,-2,-2},-5,-2);
+        int example4 = isSequencedArray2(new int[] {0,1,2,3,4,5},1,5);
+        int example5 = isSequencedArray2(new int[] {1,2,3,4},1,5);
+        int example6 = isSequencedArray2(new int[] {1,2,5}, 1,5);
+        System.out.println("Example 1: " + example1);
+        System.out.println("Example 2: " + example2);
+        System.out.println("Example 3: " + example3);
+        System.out.println("Example 4: " + example4);
+        System.out.println("Example 5: " + example5);
+        System.out.println("Example 6: " + example6);
+//        System.out.println(checkConcatenatedSum(198, 2));
+//        System.out.println(checkConcatenatedSum(198, 3));
+//        System.out.println(checkConcatenatedSum(2997, 3));
+//        System.out.println(checkConcatenatedSum(2997, 2));
+//        System.out.println(checkConcatenatedSum(13332, 4));
+//        System.out.println(checkConcatenatedSum(9, 1));
     }
 }
