@@ -211,7 +211,7 @@ public class Main {
                 boolean isPrime = true;
                 if(num1>1){
                     for(int j=2;j<n;j++){
-                        if(num1%2==0) isPrime=false;
+                        if(num1%j==0) isPrime=false;
                         break;
                     }
                 }
@@ -223,6 +223,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
+
+        Loops.Loops();
 //        Scanner scanner = new Scanner(System.in);
 //
 //        System.out.print("Enter a number: ");
@@ -279,14 +281,14 @@ public class Main {
      */
         //Test cases
        // int example1 = isMagicArray(new int[] {21, 3, 7, 9,11,4, 6} );
-        int example2 = isComplete(new int[] {5, 7, 9, 13});
+        //int example2 = isComplete(new int[] {5, 7, 9, 13});
 //        int example2 = isSequencedArray2(new int[] {1,3,4,2,5},1 ,5);
 //        int example3 = isSequencedArray2(new int[] {-5,-5,-4,-4,-3,-3,-2,-2,-2},-5,-2);
 //        int example4 = isSequencedArray2(new int[] {0,1,2,3,4,5},1,5);
 //        int example5 = isSequencedArray2(new int[] {1,2,3,4},1,5);
 //        int example6 = isSequencedArray2(new int[] {1,2,5}, 1,5);
         //System.out.println("Example 1: " + example1);
-        System.out.println("Example 2: " + example2);
+        //System.out.println("Example 2: " + example2);
 //        System.out.println("Example 3: " + example3);
 //        System.out.println("Example 4: " + example4);
 //        System.out.println("Example 5: " + example5);

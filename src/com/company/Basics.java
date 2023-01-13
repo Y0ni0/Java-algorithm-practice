@@ -33,8 +33,5 @@ public class Basics {
 
         boolean comparison = name1 == name2;
         System.out.println(comparison);
-
-
-
     }
 }
