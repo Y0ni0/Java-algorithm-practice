@@ -7,6 +7,13 @@ import java.util.Comparator;
 import java.util.HashMap;
 
 public class Loops {
+    public static String[] reverseArray(String[] lastName){
+        String[] reversedArray = new String[lastName.length];
+        for(int i = lastName.length-1; i>=0; i--){
+            reversedArray[i]= lastName[i];
+        }
+        return reversedArray;
+    }
     public static void Loops() {
 
          int[] numbers = new int[5];
@@ -14,12 +21,14 @@ public class Loops {
             numbers[i] = i;
         }
         System.out.println(Arrays.toString(numbers));
+
         String[] names = {"Abebe", "Kebede", "chala"};
         String firstName = "";
         for(int i= names.length -1 ; i>=0 ; i--){
             firstName += names[i] + " ";
         }
         System.out.println(firstName);
+        System.out.println(Arrays.toString(reverseArray(names)));
         
         //Printing out the multiplication table
 
