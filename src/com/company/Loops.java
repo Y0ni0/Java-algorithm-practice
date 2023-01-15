@@ -9,9 +9,12 @@ import java.util.HashMap;
 public class Loops {
     public static String[] reverseArray(String[] lastName){
         String[] reversedArray = new String[lastName.length];
+        int j = 0;
         for(int i = lastName.length-1; i>=0; i--){
-            reversedArray[i]= lastName[i];
+           reversedArray[j] = lastName[i];
+           j++;
         }
+
         return reversedArray;
     }
     public static void Loops() {
