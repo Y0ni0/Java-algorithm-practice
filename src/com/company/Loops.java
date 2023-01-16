@@ -17,6 +17,21 @@ public class Loops {
 
         return reversedArray;
     }
+
+    public static int[] findMinMax(int[] listOfNum){
+        int min = listOfNum[0];
+        int max = listOfNum[0];
+        for (int i = 0; i < listOfNum.length; i++) {
+            if(listOfNum[i] < min ){
+                min = listOfNum[i];
+            }
+            if(listOfNum[i] > max){
+                max = listOfNum[i];
+            }
+        }
+        int[] minMaxHolder = {min, max};
+       return minMaxHolder;
+    }
     public static void Loops() {
 
          int[] numbers = new int[5];
@@ -32,6 +47,10 @@ public class Loops {
         }
         System.out.println(firstName);
         System.out.println(Arrays.toString(reverseArray(names)));
+
+        int[] minMax = {3 , 9, 34, 67, 5, 6 };
+        int[] randomArray = new int[] {1, 5 ,6 , 8};
+        System.out.println(Arrays.toString(findMinMax(minMax)));
         
         //Printing out the multiplication table
 

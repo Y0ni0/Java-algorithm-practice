@@ -1,8 +1,9 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+import java.util.LinkedList;
+import java.util.Iterator;
+
 
 public class Main {
 
@@ -224,7 +225,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Loops.Loops();
+
+        LinkedList list =  new LinkedList();
+
+        list.add(5);
+        list.add( 1,12);
+        list.add(2,67);
+
+        list.add(45);
+        Iterator iterator = list.iterator();
+        while(iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+
+        //Loops.Loops();
 //        Scanner scanner = new Scanner(System.in);
 //
 //        System.out.print("Enter a number: ");
