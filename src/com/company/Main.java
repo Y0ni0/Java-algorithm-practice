@@ -231,6 +231,7 @@ public class Main {
         list.insert("Chala");
         list.insert("kebede");
         list.insert("Demitu");
+        list.insertAtStart("Damtew");
 
         list.show();
 //        list.add(5);
