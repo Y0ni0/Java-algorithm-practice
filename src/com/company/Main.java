@@ -227,10 +227,10 @@ public class Main {
 
         LinkedList list =  new LinkedList();
 
-        list.insert(5);
-        list.insert(7);
-        list.insert(9);
-        list.insert(19);
+        list.insert("Abebe");
+        list.insert("Chala");
+        list.insert("kebede");
+        list.insert("Demitu");
 
         list.show();
 //        list.add(5);

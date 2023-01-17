@@ -1,6 +1,7 @@
 package com.company;
 
 public class Node {
-    int data;
+    String data;
     Node next;
+
 }
