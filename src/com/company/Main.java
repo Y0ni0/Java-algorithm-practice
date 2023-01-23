@@ -224,16 +224,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-
-        LinkedList list =  new LinkedList();
-
-        list.insert("Abebe");
-        list.insert("Chala");
-        list.insert("kebede");
-        list.insert("Demitu");
-        list.insertAtStart("Damtew");
-
-        list.show();
+        MountainBike mountainBike = new MountainBike(20,1,3);
+        System.out.println(" The start speed is: " + mountainBike.speed);
+        System.out.println(" The Height is: " + mountainBike.seatHeight);
+        System.out.println(" The Gear is:  " + mountainBike.gear);
+        mountainBike.applyBreak(3);
+        System.out.println(" The speed of the bike after the brake is applied is: " + mountainBike.speed);
+//        LinkedList list =  new LinkedList();
+//
+//        list.insert("Abebe");
+//        list.insert("Chala");
+//        list.insert("kebede");
+//        list.insert("Demitu");
+//        list.insertAtStart("Damtew");
+//
+//        list.show();
 //        list.add(5);
 //        list.add( 1,12);
 //        list.add(2,67);
