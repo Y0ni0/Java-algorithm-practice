@@ -224,12 +224,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        MountainBike mountainBike = new MountainBike(20,1,3);
-        System.out.println(" The start speed is: " + mountainBike.speed);
-        System.out.println(" The Height is: " + mountainBike.seatHeight);
-        System.out.println(" The Gear is:  " + mountainBike.gear);
-        mountainBike.applyBreak(3);
-        System.out.println(" The speed of the bike after the brake is applied is: " + mountainBike.speed);
+        GraphicObject circle = new Circle();
+        circle.draw();
+        circle.resize();
+        GraphicObject rectangle = new Rectangle();
+        rectangle.draw();
+        rectangle.resize();
+//        MountainBike mountainBike = new MountainBike(20,1,3);
+//        System.out.println(" The start speed is: " + mountainBike.speed);
+//        System.out.println(" The Height is: " + mountainBike.seatHeight);
+//        System.out.println(" The Gear is:  " + mountainBike.gear);
+//        mountainBike.applyBreak(3);
+//        System.out.println(" The speed of the bike after the brake is applied is: " + mountainBike.speed);
 //        LinkedList list =  new LinkedList();
 //
 //        list.insert("Abebe");

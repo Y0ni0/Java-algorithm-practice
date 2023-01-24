@@ -1,5 +1,9 @@
 package com.company;
 
+// This is a class used to explain encapsulation
+// Private key word is used to restrict the access to the class properties
+// Helps us to define ways in which the given class properties can be accessed
+
 public class Student {
     private String name;
     private int age;
