@@ -1,5 +1,7 @@
 package com.company;
 
+//This class is used to explain abstraction
+
 public abstract class GraphicObject {
     int x, y;
 
