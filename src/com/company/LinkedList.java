@@ -61,5 +61,8 @@ public class LinkedList {
         }
         System.out.println(node.data);
     }
+    public void something(){
+        System.out.println("Hello im just a message");
+    }
 
 }
